@@ -8,6 +8,7 @@ const ComponentB = () => {
 
   const handleClick = () => {
     dispatch(addtask(task));
+    setTask("");
   };
 
   return (
@@ -15,6 +16,7 @@ const ComponentB = () => {
       <h1>Task Record</h1>
       <input
         type="text"
+        value={task}
         onChange={(e) => setTask(e.target.value)}
         placeholder="Please enter task here..."
       />
